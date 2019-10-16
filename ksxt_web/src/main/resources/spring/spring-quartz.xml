@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="sendMessageThread" class="com.lanou.web.controller.quartz.SendMessageThread"></bean>
+
+    <bean id="jobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="sendMessageThread"></property>
+        <property name="targetMethod" value="sendMessageService"></property>
+        <property name="concurrent" value="false"></property>
+    </bean>
+
+    <bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="jobDetail"></property>
+        <!--每天0点执行-->
+        <property name="cronExpression" value="0/50 * * * * ? *"></property>
+    </bean>
+
+    <bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="cronTrigger"></ref>
+            </list>
+        </property>
+        <property name="quartzProperties">
+            <props>
+                <!--随机存储，非持久化-->
+                <prop key="org.quartz.jobStore.class">org.quartz.simpl.RAMJobStore</prop>
+                <!--开启线程池-->
+                <prop key="org.quartz.threadPool.class">org.quartz.simpl.SimpleThreadPool</prop>
+                <!--指定线程数量-->
+                <prop key="org.quartz.threadPool.threadCount">10</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

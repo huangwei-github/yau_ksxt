@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TravelGuide</title>
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen"/>
+
+    <!--[if ! lte IE 6]><!-->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    <!--<![endif]-->
+
+    <!--[if gt IE 6]>
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen"/>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/ie7.css" type="text/css" media="screen"/>
+    <![endif]-->
+
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/fancybox.css" type="text/css" media="screen"/>
+
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="UTF-8"></script>
+</head>
+<body>
+
+<div id="header-top">
+
+    <div class="container">
+
+        <a href="#"></a>
+
+        <p class="left">www.哈哈哈哈.com |
+            <a href="#">登录</a> |
+            <a href="#">退出登录</a>
+        </p>
+
+        <p class="right">Subscribe to
+            <a href="#">RSS</a> |
+            <a href="#">Email</a> | <strong>122 Subscribers</strong></p>
+    </div>
+    <!-- end .container -->
+
+</div>
+<!-- end #header-top -->
+
+<div id="header" class="header">
+
+    <div class="container">
+
+        <img src="img/yd/微信图片_20190808144534.png" style="width: 100px;" alt="Travel Guide">
+
+    </div>
+    <!-- end .container -->
+
+</div>
+<!-- end #header -->
+
+<div id="nav">
+
+    <div class="container">
+
+        <ul>
+            <li class="active">
+                <a href="index.html">主页</a>
+            </li>
+            <li>
+                <a href="StudentInfo.html">个人信息</a>
+                <!--<ul>
+            <li><a href="#">这儿是页面1的按钮</a></li>
+            <li><a href="#">Private Portfolios</a></li>
+        </ul>-->
+            </li>
+            <li>
+                <a href="StudentScore.html">学生成绩信息</a>
+            </li>
+            <li>
+                <a href="#">学生课程信息</a>
+            </li>
+            <li>
+                <a href="#">测验</a>
+                <ul>
+                    <li>
+                        <a href="news.html">在线练习</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">在线考试</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div id="search">
+
+            <input type="text" class="input" value="" placeholder="Keyword search here...">
+            <input type="submit" class="submit" value="Go">
+
+        </div>
+        <!-- end #search -->
+
+    </div>
+    <!-- end .container -->
+
+</div><!-- end #nav -->
+
+<div id="nav-shadow"></div>
+
+<div>
+    <img src="img/sample-images/22.jpg" width="1002px" height="211px" style="text-align: center;margin-left: 407px;">
+</div>
+
+<div align="center">
+    <table width="1024" cellspacing="0" cellpadding="0" border="0" align="center">
+        <tbody>
+        <tr>
+            <td valign="top">
+                <table width="1024" cellspacing="0" cellpadding="0" border="0">
+                    <tbody>
+                    <tr>
+                        <td width="829" valign="top" height="51" align="center">
+                            <table style="border-right-width: 1px;border-left: #cccccc 1px solid" width="1024"
+                                   cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table width="1024" cellspacing="0" cellpadding="0" border="0" align="center">
+                                            <tbody>
+                                            <tr>
+                                                <td class="STYLE6"></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3" align="left">
+                                                    <table width="891" cellspacing="0" cellpadding="0" border="0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td height="37" background="../../images/2jgsz_21.gif">
+                                                                <table width="891" height="37" cellspacing="0"
+                                                                       cellpadding="0" border="0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td width="27">&nbsp;</td>
+                                                                        <td width="567" align="left">
+                                                                            <span class="windowstyle49407" style="font-size: 26px;color: #c74f4f;">新闻</span><!--#endeditable--></td>
+                                                                        <td width="297">&nbsp;</td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"
+                                                    style="padding-bottom: 18px;padding-top: 18px;padding-left: 18px;padding-right: 18px"
+                                                    align="left">
+                                                    <!--#begineditable name="文章内容" viewid="55091" tagname="文章内容" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->
+
+                                                    <link href="/system/resource/style/component/news/content/title.css"
+                                                          type="text/css" rel="stylesheet">
+                                                    <style type="text/css">
+                                                        .content {
+                                                            margin: auto;
+                                                            text-align: left;
+                                                            line-height: 18px;
+                                                            padding: 3px 0 0 0;
+                                                            color: #727272;
+                                                        }
+
+                                                        .process {
+                                                            width: 162px;
+                                                            height: 11px;
+                                                            background: #EDEDED;
+                                                            overflow: hidden;
+                                                            float: left;
+                                                            margin-left: 26px !important;
+                                                            margin-left: 13px;
+                                                            margin-right: 10px;
+                                                        }
+
+                                                        .process div {
+                                                            width: 160px;
+                                                            height: 11px;
+                                                            background: repeat-x;
+                                                            border-left: 1px solid #000;
+                                                            border-right: 1px solid #000;
+                                                        }
+
+                                                        .process .style7 {
+                                                            border-left-color: #ff0000;
+                                                            border-right-color: #ff0000;
+                                                            background-position: 0 -77px;
+                                                        }
+
+                                                    </style>
+                                                    <form name="form55091a">
+                                                        <table class="winstyle55091" width="100%" cellspacing="0"
+                                                               cellpadding="0" border="0">
+
+                                                            <tbody>
+                                                            <tr>
+                                                                <td id="headline" class="titlestyle55091" align="center" style="font-size: 26px; color: #c74f4f;">
+                                                                    我校与陕西建工集团有限公司负责人召开座谈会
+                                                                </td>
+                                                            </tr>
+                                                            <tr height="30">
+                                                                <td align="center"><span class="timestyle55091">发布时间：<p style="display: inline-block" id="create">2018-05-26</p></span>
+                                                                    <span class="authorstyle55091">&nbsp;</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="right"><span></span>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td class="contentstyle55091">
+                                                                    <div class="c55091_content" id="vsb_newscontent">
+                                                                        <div>
+                                                                            <p style="text-align: center">
+                                                                                <span style="font-family: 楷体;font-size: 14px;font-weight: normal">作者：</span>&nbsp; &nbsp;
+                                                                                <span style="display: inline-block" id="author">姜建雄</span>
+                                                                            </p>
+                                                                            <hr>
+                                                                            <p style="text-indent: 2em" id="content"><span
+                                                                                    style="font-family: 楷体,楷体_GB2312, SimKai"><strong><span
+                                                                                    style="font-size: 18px">本网讯</span></strong></span><span
+                                                                                    style="font-family: 宋体,SimSun;font-size: 18px">为了加快新校区后期建设工作进度，确保工程质量。7月31日下午，我校在行政楼7楼会议室与陕西建工集团有限公司召开座谈会，副校长杨伟宏,陕西建工集团有限公司董事章贵金、陕建集团总经理助理、陕建十三建公司临时党委书记黄永根，陕建十三建公司临时党委副书记、董事长、总经理卜国平,新校区建设管理办公室主任刘小民等参加了座谈会。</span>
+                                                                            </p>
+                                                                            <p style="text-indent: 2em"><span
+                                                                                    style="font-family: 宋体,SimSun;font-size: 18px">座谈会上，杨伟宏副校长与章贵金董事就新校区建设情况以及建设工期、前期工程的认质认价及融资金额等问<span
+                                                                                    style="font-size: 18px">题进行了深入交流。章贵金董事表示，要聚焦突出问题,集中攻坚克难，同时要求新校区项目部要进一步加强施工现场管理,加快工程建设进度。杨伟宏副校长对此表示感谢。希望陕西建工集团有限公司进一步加强质量监控，加快工程进度，确保各项建设项目如期完成。</span></span>
+                                                                            </p>
+                                                                            <p style="text-align: center"><span
+                                                                                    style="font-family: 楷体;font-size: 14px;font-weight: normal"></span>
+                                                                            </p>
+                                                                            <p style="text-align: center"><span
+                                                                                    style="font-family: 楷体;font-size: 14px;font-weight: normal"></span>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td class="pagestyle55091" align="left">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <div id="div_vote_id"></div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left"><span>
+                                                                </span></td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td align="center">
+
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td align="right">
+                                                                    <table>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td class="contextstyle55091"><a
+                                                                                    href="30574.htm"><span
+                                                                                    class="contextstyle55091">上一条：我校与陕建设计院举行工作座谈会</span></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="contextstyle55091"><a
+                                                                                    href="30562.htm"><span
+                                                                                    class="contextstyle55091">下一条：张金锁校长王顺副书记一行赴北京吊唁杰出校友李鹏同志</span></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <span>【</span><a
+                                                                        href="javascript:window.opener=null;window.open('','_self');window.close();"><span>关闭窗口</span></a><span>】</span>
+                                                                </td>
+                                                            </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </form>
+
+
+                                                    <script type="text/javascript">
+
+                                                        function dosuba55091a() {
+                                                            try {
+                                                                var ua = navigator.userAgent.toLowerCase();
+                                                                if (ua.indexOf("msie 8") > -1) {
+                                                                    window.external.AddToFavoritesBar(document.location.href, document.title, "");//IE8
+                                                                } else {
+                                                                    if (document.all) {
+                                                                        window.external.addFavorite(document.location.href, document.title);
+                                                                    } else if (window.sidebar) {
+                                                                        window.sidebar.addPanel(document.title, document.location.href, "");//firefox
+                                                                    }
+                                                                }
+
+                                                            } catch (e) {
+                                                                alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");
+                                                            }
+                                                        }
+                                                    </script>
+                                                    <!--#endeditable--></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="footer">
+
+    <div class="container clearfix">
+
+        <a href="index.html"><img src="img/footer-logo.png" alt="footer-logo" class="footer-logo" /></a>
+
+        <div class="one-third">
+
+            <ul>
+                <li>
+                    <a href="#">地址：中国·陕西·延安市圣地路580号</a>
+                </li>
+                <li>
+                    <a href="#">邮编：716000</a>
+                </li>
+                <li>
+                    <a href="#">My Travels</a>
+                </li>
+                <li>
+                    <a href="#">E-Mail:ydxb@yau.edu.cn </a>
+                </li>
+                <li>
+                    <a href="#">电话：86-0911-2650666</a>
+                </li>
+                <li>
+                    <a href="#">传真：86-0911-2650004</a>
+                </li>
+                <li>
+                    <a href="#">陕ICP备05011013号 Copyright</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- end .one-third -->
+
+        <div class="one-fourth">
+
+            <h4>Categories</h4>
+
+            <ul id="categories">
+                <li>
+                    <a href="#" ><img src="img/yd/ser_box1.png">  地址：中国·陕西·延安市圣地路580号</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/yd/ser_box2.png">邮编：716000</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/yd/ser_box3.png">My Travels</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/yd/ewm.jpg">E-Mail:ydxb@yau.edu.cn </a>
+                </li>
+            </ul>
+
+            <strong class="align-center"><a href="#">Find more...</a></strong>
+
+        </div>
+        <!-- end .one-fourth -->
+
+        <div class="two-fifth last">
+
+            <h4><span>Latest</span> Tweets</h4>
+
+            <ul id="latest-tweets">
+
+                <li>
+                    <a href="#" class="user">@medioworks</a>
+                    <p class="tweet">Lorem Ipsum is simply dummy text of
+                        <a href="#">the printing and typesetting</a> industry. Lorem Ipsum has been the industry's standard dummy text...</p>
+                </li>
+
+                <li>
+                    <a href="#" class="user">@medioworks</a>
+                    <p class="tweet">Lorem Ipsum is simply
+                        <a href="#">dummy text</a> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text...</p>
+                </li>
+
+                <li>
+                    <a href="#" class="user">@medioworks</a>
+                    <p class="tweet">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text...</p>
+                </li>
+
+            </ul>
+            <!-- end #latest-tweets -->
+
+            <strong class="align-right"><a href="#">Join Conversation</a></strong>
+
+        </div>
+        <!-- end .one-misc -->
+
+    </div>
+    <!-- end .container -->
+
+</div>
+<script type="text/javascript">
+
+    // function singleNews() {
+    //     var title = $("#title").val();
+    //     var content = $("#content").val();
+    //     var create = $("#create").val();
+    //     var author = $("#author").val();
+
+        $.ajax({
+            type:'get',
+            url:'../newsinfo?id=2',
+            dataType:'json',
+
+            success:function (data) {
+                console.log(data);
+                $("#author").text(data.author);
+                $("#title").text(data.title);
+                $("#content").text(data.content);
+                $("#create").text(data.create);
+            }
+        });
+    // }
+</script>
+</div>
+</body>
+</html>

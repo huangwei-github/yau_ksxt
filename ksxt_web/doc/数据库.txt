@@ -1,0 +1,169 @@
+
+1. 每一个表都必须有备注字段notes
+2. 凡标清单个数字的，均是smallint型
+3. 主键均是自增类型
+4. 性别均是char(2)型
+5. 大文本均是text型
+6. 组卷时间需要使用datetime型
+7. 其他时间均采用date型
+8. 均需添加 comment
+
+===================================
+
+数据库主机: 118.24.219.49
+
+数据库用户名: ksxt
+
+数据库密码: ksxt123
+
+数据库名: db_ksxt
+
+SVN: mrhuangwe beicheng z740332251
+
+===================================
+
+1.学生(tb_student)
+
+id, username(学号), password default 000000, status(1启用 2不启用)
+
+2.学生个人信息(tb_studentinfo)
+
+id, name, gender, birth, addr, nation, identify, phone, email 
+
+3.学生学院信息(tb_studentschool)
+
+id, school(学院id), major(专业id), clazz(班级id)
+
+4.学生成绩(tb_grade)
+
+id, sid(学生id), cid(课程id),  grade(成绩), grade1(补考成绩), grade2(重修成绩)
+
+==================================
+
+5.老师(tb_teacher)
+
+id, username, password, status
+
+6.老师个人信息(tb_teacherinfo)
+
+id, name, gender, birth, addr, nation, identity, phone, email, degree(学位)
+
+7.老师权限信息(tb_privilege)
+
+id, modGrade(1启用 2不启用), buildCourse(1启用 2不启用) 
+
+8.老师学院信息(tb_studentschool)
+
+id, school(学院id)
+
+==================================
+
+9.学院信息(tb_school)
+
+id, school(学院名称)
+
+10.专业信息(tb_major)
+
+id, sid(学院id), major(专业名称) 
+
+==================================
+
+11.管理员(tb_admin)
+
+id, username, password, status
+
+12.管理员个人信息(tb_admininfo)
+
+id, name, tel, email
+
+==================================
+
+13.课程(tb_course)
+
+id, course(课程名称)
+
+14.课程信息(tb_courseinfo)
+
+id, nature(课程性质1必修 2选修), score(学分), year(修读学年), attr(课程归属:学位1/非学位2)
+
+15.选课信息(tb_course_student)
+
+id, course(课程号), student(学号)
+
+16.课程老师(tb_course_teacher)
+
+id, course(课程号), teacher(老师号)
+
+==================================
+
+17.选择题(tb_selection)
+
+id, question(题目), score(分值 default 3), weight(权值),  course(课程id),selectionA(选项A), B, C, D, E(default null), F(default null), answer(答案), notes(备注)
+
+18.机试题(tb_online)
+
+id, question(题目), score(分值 default 15), weight(权值), course(课程id), referrence(参考答案), notes(备注)
+
+19.主观题(tb_subjection)
+
+id, question(题目), score(分值 default 8), weight(权值), course(课程id), referrence(参考答案), notes(备注)
+
+20.临时选择题信息(tb_temp_selection)(30)
+
+id, 1 2 3 4(选择题id)
+
+21.临时机试题信息(tb_temp_online)(30)
+
+id, 1 2 3 4(机试题id)
+
+22.临时主观信息(tb_temp_subjection)(40)
+
+id, 1 2 3 4(主观题id)
+
+23.组卷信息(tb_examination)
+
+id,  teacher(老师id), create(生成时间), selection(选择题id), online(机试题id), subjective(主观题id)
+
+==================================
+
+24.评论(tb_remark)
+
+id, comment(评论内容), student(学生id), create(创建时间)
+
+==================================
+
+25.通知(tb_notice)
+
+id, notice(通知内容), create(创建时间)
+
+==================================
+
+26.选择题文件(tb_selection_file)
+
+id, file(文件名称), upload(上传时间), teacher(老师id), location(文件地址)
+
+27.机试题文件(tb_online_file)
+
+id, file(文件名称), upload(上传时间), teacher(老师id), location(文件地址)
+
+28.主观题文件(tb_subjective_file)
+
+id, file(文件名称), upload(上传时间), teacher(老师id), location(文件地址)
+
+==================================
+
+29. 学生考试(tb_student_exam)
+
+id, student(学生id), examination(组卷id:老师生成), selection(选择题答案[json]), online(编程题(文件位置)), subjective(主观题text) , notes(分数)
+
+
+
+
+
+
+
+
+
+
+
+

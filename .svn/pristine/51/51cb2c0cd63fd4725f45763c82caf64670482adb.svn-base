@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html lang="zh-ch">
+
+<head>
+    <meta charset="utf-8">
+    <title>考试系统1.0</title>
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen"/>
+
+    <!--[if ! lte IE 6]><!-->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    <!--<![endif]-->
+
+    <!--[if gt IE 6]>
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen"/>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/ie7.css" type="text/css" media="screen"/>
+    <![endif]-->
+
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/fancybox.css" type="text/css" media="screen"/>
+    <!-- start scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.cycle.all.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/organictabs.jquery.js"></script>
+    <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/custom.js"></script>
+    <!--[if IE]>
+    <script src="js/selectivizr.js"></script> <![endif]-->
+    <!-- end scripts -->
+
+</head>
+
+<body>
+
+<div id="header-top">
+
+    <div class="container">
+
+        <a href="#"></a>
+
+        <p class="right">www.哈哈哈哈.com |
+            <a id="stu_name1"></a>【教师】|       <!--显示姓名--><!--还有个left未启用-->
+            <a href="#" onclick="logout()">退出登录</a>
+        </p>
+        <!--<p class="right">Subscribe to
+            <a href="#">RSS</a> |
+            <a href="#">Email</a> | <strong>122 Subscribers</strong></p>-->
+    </div>
+    <!-- end .container -->
+
+</div>
+<!-- end #header-top -->
+
+<div id="header" class="header">
+
+    <div class="container">
+
+        <img src="img/yd/微信图片_20190808144534.png" style="width: 100px;" alt="Travel Guide">
+
+    </div>
+    <!-- end .container -->
+
+</div>
+<!-- end #header -->
+
+<div id="nav">
+
+    <div class="container">
+
+        <ul>
+            <li class="active">
+                <a href="teaindex.html">主页</a>
+            </li>
+            <li>
+                <a href="teaInfo.html">个人信息</a>
+                <!--<ul>
+            <li><a href="#">这儿是页面1的按钮</a></li>
+            <li><a href="#">Private Portfolios</a></li>
+        </ul>-->
+            </li>
+            <li>
+                <a href="teanews.html">新闻编辑</a>
+            </li>
+            <li>
+                <a href="StudentChoosCourse.html">学生选课信息</a>
+            </li>
+            <li>
+                <a href="fileupload.html">上传题库</a>
+            </li>
+            <li>
+                <a href="gen_paper.html">打印试卷</a>
+
+            </li>
+            <li>
+                <a href="#">上传成绩表</a>
+
+            </li>
+        </ul>
+
+        <div id="search">
+
+            <input type="text" class="input" value="" placeholder="Keyword search here...">
+            <input type="submit" class="submit" value="Go">
+
+        </div>
+        <!-- end #search -->
+
+    </div>
+    <!-- end .container -->
+
+</div>      <!--end top-->
+
+<div id="nav-shadow"></div>
+
+<div id="slider">
+
+    <div class="container">
+
+        <ul>
+
+            <li>
+
+                <img src="img/yd/2017banner_44.jpg" width="1010" height="330" alt=""/>
+
+            </li>
+
+            <li>
+
+                <img src="img/yd/2017banner_555.jpg" width="1010" height="330" alt=""/>
+
+            </li>
+
+            <li>
+
+                <img src="img/yd/BK5I1675.jpg" width="1010" height="330" alt=""/>
+
+            </li>
+
+            <li>
+
+                <img src="img/yd/BK5I1559-2.jpg" width="1010" height="330" alt=""/>
+
+                <!--<div class="slide-info">
+
+            <h2><a href="#">Beautiful Frozen Landscape</a></h2>
+
+            <p class="meta">Published on <a href="#">November 3, 2010</a> by <a href="#">John Doe</a></p>
+
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type...</p>
+
+            <a href="#" class="comments-count">12 Comments</a>
+
+            <a href="single-post.html" class="slider-button">Read More...</a>
+
+        </div>end .slide-info -->
+
+            </li>
+
+        </ul>
+
+    </div>
+    <!-- end .container -->
+
+</div>
+<!-- end #slider -->
+
+<div class="copyrights">Collect from
+    <a href="http://www.cssmoban.com/" title="网站模板">网站模板</a>
+</div>
+<div id="content">
+
+    <div class="container">
+
+        <div id="main">
+
+            <div id="trips-viewer" class="box">
+
+                <div class="box-header">
+
+                    <ul class="tabs-nav">
+                        <li>
+                            <a href="#featured-trips">新闻公告</a>
+                        </li>
+                        <!--<li>
+                            <a href="#popular-trips">2222222222222222</a>
+                        </li>
+                        <li>
+                            <a href="#most-viewed-trips">3333333333333333</a>
+                        </li>-->
+                    </ul>
+
+                    <!--<a href="#" class="rss"><img src="" alt="icon-rss" /></a>-->
+
+                </div>
+                <!-- end .box-header -->
+
+                <div id="featured-trips" class="tab-content"style="float: left">
+
+                    <div class="trips-container">
+                        <!--这儿是公告的或者新闻-->
+
+                        <ul id="topNews">
+
+                        </ul>
+
+                    </div>
+                    <!-- end .trips-container -->
+
+                    <ul class="trips-nav">
+
+                        <!-- end .nav-button -->
+
+                    </ul>
+                    <!-- end .trips-nav -->
+
+                </div>
+                <!-- end #featured-trips -->
+
+                <!-- end #popular-trips -->
+
+                <!-- end #most-viewed-trips -->
+
+            </div>
+            <!-- end #trips-viewer -->
+
+            <!-- end .entry-content -->
+            <div id="news">
+
+            </div>
+            <!-- end .entry -->
+
+            <!--页面按钮-->
+            <ul class="pagination">
+                <li class="prev">
+                    <a href="#">Prev</a>
+                </li>
+                <li>
+                    <a href="#">1</a>
+                </li>
+                <li class="active">
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li class="next">
+                    <a href="#">Next</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- end #main -->
+
+        <div id="sidebar">      <!--右侧边栏-->
+
+            <div class="ads box">
+
+                <ul>
+                    <div></div>
+                    <li>
+                        <a href="programming.html" target="_blank"><img width="100px" height="100px" src="img/yd/ceshi.png" alt="Themeforest"></a>
+                        <div style="margin-left: 32px">在线编程</div>
+                    </li>
+                    <li class="even">
+                        <a href="examing.html" target="_blank"><img width="100px" height="100px" src="img/yd/kaoshi.png" alt="Graphicriver"></a>
+                        <div style="margin-left: 32px">在线考试</div>
+                    </li>
+                    <li>
+                        <a href="http://219.244.0.21/xqzl/ydxg.htm"><img width="100px" height="100px" src="img/yd/yingyue.png" alt="Activeden"></a>
+                        <div style="margin-left: 32px">延大校歌</div>
+                    </li>
+                    <li class="even">
+                        <a href="http://219.244.0.21/info/1068/23120.htm"><img width="100px" height="100px" src="img/yd/rili.png" alt="CodeCanyon"></a>
+                        <div style="margin-left: 32px">延大校历</div>
+                    </li>
+                </ul>
+
+
+                <!--<p class="align-center">
+                    <a href="#">哈哈哈哈哈哈哈哈</a>
+                </p>-->
+
+            </div>
+            <!-- end .ads -->
+
+            <div id="recent-tabs" class="box">
+
+                <div class="box-header">
+
+                    <ul class="nav">
+                        <li>
+                            <a class="current" href="#recent-tabs-posts">微博热门话题</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- end .box-header -->
+
+                <div class="list-wrap">
+
+                    <ul id="recent-tabs-posts">
+                        <li>
+                            <div class="UG_list_c" action-type="feed_list_item" href="http://s.weibo.com/weibo?q=%23%E9%A6%99%E6%B8%AF%E6%98%AF%E4%B8%AD%E5%9B%BD%E7%9A%84%E9%A6%99%E6%B8%AF%23" suda-uatrack="key=www_unlogin_home&amp;value=hot01">
+                                <div class="pic W_piccut_v">
+                                    <a href="http://s.weibo.com/weibo?q=%23%E9%A6%99%E6%B8%AF%E6%98%AF%E4%B8%AD%E5%9B%BD%E7%9A%84%E9%A6%99%E6%B8%AF%23" target="_blank">
+                                        <img style="width: 42px" src="https://wx2.sinaimg.cn/large/884f7263ly1g5z7nnjiptj207p07p74b.jpg" alt=""></a>
+                                </div>
+                                <div class="list_des">
+                                    <h3 class="list_title_s" style="font-size: 15px"><a href="http://s.weibo.com/weibo?q=%23%E9%A6%99%E6%B8%AF%E6%98%AF%E4%B8%AD%E5%9B%BD%E7%9A%84%E9%A6%99%E6%B8%AF%23" class="S_txt1" target="_blank">#香港是中国的香港#</a></h3>
+                                    <div class="des_main S_txt2">8.8亿阅读    135万讨论</div>
+                                </div>
+                            </div>
+
+                            <div class="UG_list_c" action-type="feed_list_item" href="http://s.weibo.com/weibo?q=%23%E6%88%91%E4%BB%AC%E9%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E7%88%B1%E8%B1%86%E5%90%8D%E5%AD%97%E5%8F%AB%E9%98%BF%E4%B8%AD%23" suda-uatrack="key=www_unlogin_home&amp;value=hot02">
+                                <div class="pic W_piccut_v">
+                                    <a href="http://s.weibo.com/weibo?q=%23%E6%88%91%E4%BB%AC%E9%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E7%88%B1%E8%B1%86%E5%90%8D%E5%AD%97%E5%8F%AB%E9%98%BF%E4%B8%AD%23" target="_blank"><img style="width: 42px" src="https://wx3.sinaimg.cn/large/a716fd45ly1g60qovudegj20dw0dwdgk.jpg" alt=""></a>
+                                </div>
+                                <div class="list_des">
+                                    <h3 class="list_title_s" style="font-size: 15px"><a href="http://s.weibo.com/weibo?q=%23%E6%88%91%E4%BB%AC%E9%83%BD%E6%9C%89%E4%B8%80%E4%B8%AA%E7%88%B1%E8%B1%86%E5%90%8D%E5%AD%97%E5%8F%AB%E9%98%BF%E4%B8%AD%23" class="S_txt1" target="_blank">#我们都有一个爱豆名字叫阿中#</a></h3>
+                                    <div class="des_main S_txt2">4.8亿阅读    32.7万讨论</div>
+                                </div>
+                            </div>
+                            <div class="UG_list_c" action-type="feed_list_item" href="http://s.weibo.com/weibo?q=%23%E4%B9%9D%E5%AE%B8%E5%90%91%E7%81%B5%E6%B1%90%E6%B1%82%E5%A9%9A%23" suda-uatrack="key=www_unlogin_home&amp;value=hot03">
+                                <div class="pic W_piccut_v">
+                                    <a href="http://s.weibo.com/weibo?q=%23%E4%B9%9D%E5%AE%B8%E5%90%91%E7%81%B5%E6%B1%90%E6%B1%82%E5%A9%9A%23" target="_blank"><img style="width: 42px" src="https://wx2.sinaimg.cn/large/61e7f8b0ly1g60dzu772qj20bw0bwwfs.jpg" alt=""></a>
+                                </div>
+                                <div class="list_des">
+                                    <h3 class="list_title_s" style="font-size: 15px"><a href="http://s.weibo.com/weibo?q=%23%E4%B9%9D%E5%AE%B8%E5%90%91%E7%81%B5%E6%B1%90%E6%B1%82%E5%A9%9A%23" class="S_txt1" target="_blank">#九宸向灵汐求婚#</a></h3>
+                                    <div class="des_main S_txt2">1.6亿阅读    3.9万讨论</div>
+                                </div>
+                            </div>
+                            <div class="UG_list_c" action-type="feed_list_item" href="http://s.weibo.com/weibo?q=%23%E9%A6%99%E6%B8%AF%E5%8F%82%E4%B8%8E%E7%A4%BA%E5%A8%81%E5%A5%B3%E5%AD%A9%E5%93%BD%E5%92%BD%E8%B4%A8%E9%97%AE%E5%90%8C%E4%BC%99%23" suda-uatrack="key=www_unlogin_home&amp;value=hot04">
+                                <div class="pic W_piccut_v">
+                                    <a href="http://s.weibo.com/weibo?q=%23%E9%A6%99%E6%B8%AF%E5%8F%82%E4%B8%8E%E7%A4%BA%E5%A8%81%E5%A5%B3%E5%AD%A9%E5%93%BD%E5%92%BD%E8%B4%A8%E9%97%AE%E5%90%8C%E4%BC%99%23" target="_blank"><img style="width: 42px" src="https://wx1.sinaimg.cn/large/9e5389bbly1g60fj3t925j20dw0dw0u2.jpg" alt=""></a>
+                                </div>
+                                <div class="list_des">
+                                    <h3 class="list_title_s" style="font-size: 15px"><a href="http://s.weibo.com/weibo?q=%23%E9%A6%99%E6%B8%AF%E5%8F%82%E4%B8%8E%E7%A4%BA%E5%A8%81%E5%A5%B3%E5%AD%A9%E5%93%BD%E5%92%BD%E8%B4%A8%E9%97%AE%E5%90%8C%E4%BC%99%23" class="S_txt1" target="_blank">#香港参与示威女孩哽咽质问同伙#</a></h3>
+                                    <div class="des_main S_txt2">8.3亿阅读    10.4万讨论</div>
+                                </div>
+                            </div>
+                            <div class="UG_list_c" action-type="feed_list_item" href="http://s.weibo.com/weibo?q=%23%E6%96%B9%E4%B8%80%E5%87%A1%E4%B9%94%E8%8B%B1%E5%AD%90%E6%8B%A5%E6%8A%B1%23" suda-uatrack="key=www_unlogin_home&amp;value=hot05">
+                                <div class="pic W_piccut_v">
+                                    <a href="http://s.weibo.com/weibo?q=%23%E6%96%B9%E4%B8%80%E5%87%A1%E4%B9%94%E8%8B%B1%E5%AD%90%E6%8B%A5%E6%8A%B1%23" target="_blank"><img style="width: 42px" src="https://wx4.sinaimg.cn/large/005TR3jLly1g60ltktaj7j30dw0dwmxn.jpg" alt=""></a>
+                                </div>
+                                <div class="list_des">
+                                    <h3 class="list_title_s" style="font-size: 15px"><a href="http://s.weibo.com/weibo?q=%23%E6%96%B9%E4%B8%80%E5%87%A1%E4%B9%94%E8%8B%B1%E5%AD%90%E6%8B%A5%E6%8A%B1%23" class="S_txt1" target="_blank">#方一凡乔英子拥抱#</a></h3>
+                                    <div class="des_main S_txt2">2.8亿阅读    5.8万讨论</div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <!-- end #recent-tabs-posts-->
+
+
+                </div>
+                <!-- end .list-wrap -->
+
+            </div>
+            <!-- end #recent-tabs -->
+
+            <div class="flickr-feed box">
+
+                <div class="box-header">
+
+                    <h6 class="align-left"><!--<img src="img/icon-flickr-feed.png" alt="icon-flickr-feed" class="flickr-icon" />--> 今日天气</h6>
+
+
+
+                </div>
+                <div id="body" style="font-size: 13px">
+                    <hr>
+                    <strong>日期|星期&nbsp;&nbsp;&nbsp;</strong><span id="date"></span>&nbsp;&nbsp;<span id="week"></span><hr>
+                    <strong>天气|温度&nbsp;&nbsp;&nbsp;</strong><span id="weather"></span>|<span id="real"></span><hr>
+                    <strong>今日宜做 &nbsp;&nbsp;&nbsp;</strong><span id="tips"></span><hr>
+                </div>
+                <!-- end .box-header -->
+
+            </div>
+            <!-- end .flickr-feed -->
+
+            <div class="tags box">
+
+                <div class="box-header">
+
+                    <h6>TravelGuide Tags</h6>
+
+                </div>
+                <!-- end .box-header -->
+
+                <ul>
+                    <li>
+                        <a href="#">New York City</a>
+                    </li>
+                    <li>
+                        <a href="#">Australia</a>
+                    </li>
+                    <li>
+                        <a href="#">Woods</a>
+                    </li>
+                    <li>
+                        <a href="#">Beach</a>
+                    </li>
+                    <li>
+                        <a href="#">Brooklyn</a>
+                    </li>
+                    <li>
+                        <a href="#">Bridge</a>
+                    </li>
+                    <li>
+                        <a href="#">Texas</a>
+                    </li>
+                    <li>
+                        <a href="#">2010</a>
+                    </li>
+                    <li>
+                        <a href="#">Palmtree</a>
+                    </li>
+                    <li>
+                        <a href="#">Miami</a>
+                    </li>
+                    <li>
+                        <a href="#">Museum</a>
+                    </li>
+                    <li>
+                        <a href="#">Native</a>
+                    </li>
+                    <li>
+                        <a href="#">American</a>
+                    </li>
+                    <li>
+                        <a href="#">Trips</a>
+                    </li>
+                    <li>
+                        <a href="#">Private</a>
+                    </li>
+                    <li>
+                        <a href="#">Family</a>
+                    </li>
+                    <li>
+                        <a href="#">Photo</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- end .tags -->
+
+            <!--<img src="static/img/ad.gif" alt="ad" class="ad-bar" />
+            <a href="#?ref=smuliii"><img src="http://envato.s3.amazonaws.com/referrer_adverts/tf_300x250_v5.gif" alt="tf_300x250_v5" class="ad" /></a>
+-->
+        </div>
+        <!-- end #sidebar -->
+
+        <div class="clear"></div>
+
+    </div>
+    <!-- end .container -->
+
+</div>
+<!-- end #content -->
+
+<div id="footer">
+
+    <div class="container clearfix">
+
+        <a href="index.html"><img src="img/footer-logo.png" alt="footer-logo" class="footer-logo"/></a>
+
+        <div class="one-third">
+
+            <ul id="categories">
+                <li>
+                    <a href="#">地址：中国·陕西·延安市圣地路580号</a>
+                </li>
+                <li>
+                    <a href="#">邮编：716000</a>
+                </li>
+                <li>
+                    <a href="#">My Travels</a>
+                </li>
+                <li>
+                    <a href="#">E-Mail:ydxb@yau.edu.cn </a>
+                </li>
+                <li>
+                    <a href="#">电话：86-0911-2650666</a>
+                </li>
+                <li>
+                    <a href="#">传真：86-0911-2650004</a>
+                </li>
+                <li>
+                    <a href="#">陕ICP备05011013号 Copyright</a>
+                </li>
+            </ul>
+
+        </div>
+        <!-- end .one-third -->
+
+        <div class="one-fourth">
+
+            <h4>Categories</h4>
+
+            <ul id="categories">
+                <li>
+                    <a href="#"><img src="img/yd/ser_box1.png"> 地址：中国·陕西·延安市圣地路580号</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/yd/ser_box2.png">邮编：716000</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/yd/ser_box3.png">My Travels</a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/yd/ewm.jpg">E-Mail:ydxb@yau.edu.cn </a>
+                </li>
+            </ul>
+
+            <strong class="align-center"><a href="#">Find more...</a></strong>
+
+        </div>
+        <!-- end .one-fourth -->
+
+        <div class="two-fifth last">
+
+            <h4><span>Latest</span> Tweets</h4>
+
+            <ul id="latest-tweets">
+
+                <li>
+                    <a href="#" class="user">@medioworks</a>
+                    <p class="tweet">Lorem Ipsum is simply dummy text of
+                        <a href="#">the printing and typesetting</a> industry. Lorem Ipsum has been the industry's
+                        standard dummy text...</p>
+                </li>
+
+                <li>
+                    <a href="#" class="user">@medioworks</a>
+                    <p class="tweet">Lorem Ipsum is simply
+                        <a href="#">dummy text</a> of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text...</p>
+                </li>
+
+                <li>
+                    <a href="#" class="user">@medioworks</a>
+                    <p class="tweet">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                        Ipsum has been the industry's standard dummy text...</p>
+                </li>
+
+            </ul>
+            <!-- end #latest-tweets -->
+
+            <strong class="align-right"><a href="#">Join Conversation</a></strong>
+
+        </div>
+        <!-- end .one-misc -->
+
+    </div>
+    <!-- end .container -->
+
+</div>
+<!-- end #footer -->
+
+<!--<div id="footer-bottom">
+
+    <div class="container">
+
+        <p class="align-left">TravelGuide - Copyright 2010, All Rights Reserved. More Templates
+            <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from
+            <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
+        </p>
+
+        <ul class="align-right">
+            <li>
+                <a href="#">Login</a><span class="separator">|</span></li>
+            <li>
+                <a href="#">SignUp</a><span class="separator">|</span></li>
+            <li>
+                <a href="#">Support</a><span class="separator">|</span></li>
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+        </ul>
+
+    </div>-->
+<!-- end .container -->
+
+</div>
+<!-- end #footer-bottom -->
+<script type="text/javascript">
+    $.ajax({
+        type:"GET",
+        url:"../haa",
+        dataType:"json",
+        success:function(data) {
+            console.log(data)
+            $("#date").text(data.date);
+            $("#week").text(data.week);
+            $("#weather").text(data.weather);
+            $("#real").text(data.real);
+            $("#wind").text(data.wind);
+            $("#air").text(data.air);
+            $("#tips").text(data.tips);
+
+        }
+    });
+</script>
+<script>
+
+    $(function () {
+        $('#stu_name1').text(getParam("teacher"));
+    })
+
+    /**
+     * 获取指定的URL参数值
+     * URL:http://www.quwan.com/index?name=tyler
+     * 参数：paramName URL参数
+     * 调用方法:getParam("name")
+     * 返回值:tyler
+     */
+    function getParam(paramName) {
+        paramValue = "", isFound = !1;
+        if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {
+            arrSource = unescape(this.location.search).substring(1, this.location.search.length).split("&"), i = 0;
+            while (i < arrSource.length && !isFound) arrSource[i].indexOf("=") > 0 && arrSource[i].split("=")[0].toLowerCase() == paramName.toLowerCase() && (paramValue = arrSource[i].split("=")[1], isFound = !0), i++
+        }
+        return paramValue == "" && (paramValue = null), paramValue
+    }
+
+</script>
+<script type="text/javascript" src="js/loaclcustom.js"></script>    <!--自定义的JavaScript-->
+</body>
+
+</html>

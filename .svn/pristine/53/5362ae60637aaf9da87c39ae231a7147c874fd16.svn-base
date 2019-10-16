@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.ISubjectionFileMapper">
+
+
+    <insert id="insertSubjectionFile" parameterType="com.lanou.entity.dto.Subjection_FileDto">
+        insert into tb_subjection_file(filename, upload, teacher, location) values (#{filename},#{upload},#{teacher},#{location})
+    </insert>
+
+</mapper>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>考题上传</title>
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="css/fancybox.css" type="text/css" media="screen"/>
+    <!--上面是top的css下面是信息的css-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="css/easy-upload.css">
+    <script type="text/javascript" src="js/jqueryforupload.js"></script>
+    <!-- 视实际需要决定是否引入jquery.cookie-1.4.1.min.js-->
+    <script type="text/javascript" src="js/jquery.cookie-1.4.1.min.js"></script>
+    <script type="text/javascript" src="js/easyUpload.js"></script>
+</head>
+
+<body>
+<div id="header-top">
+
+    <div class="container">
+
+        <a href="#"></a>
+
+        <p class="right">www.哈哈哈哈.com |
+            <a id="stu_name1"></a> |       <!--显示姓名--><!--还有个left未启用-->
+            <a href="#" onclick="logout()">退出登录</a>
+        </p>
+        <!--<p class="right">Subscribe to
+            <a href="#">RSS</a> |
+            <a href="#">Email</a> | <strong>122 Subscribers</strong></p>-->
+    </div>
+    <!-- end .container -->
+
+</div>
+<!-- end #header-top -->
+
+<div id="header" class="header">
+
+    <div class="container">
+
+        <img src="img/yd/微信图片_20190808144534.png" style="width: 100px;" alt="Travel Guide">
+
+    </div>
+    <!-- end .container -->
+
+</div>
+<!-- end #header -->
+
+<div id="nav">
+
+    <div class="container">
+
+        <ul>
+            <li>
+                <a href="teaindex.html">主页</a>
+            </li>
+            <li>
+                <a href="teaInfo.html">个人信息</a>
+                <!--<ul>
+            <li><a href="#">这儿是页面1的按钮</a></li>
+            <li><a href="#">Private Portfolios</a></li>
+        </ul>-->
+            </li>
+            <li>
+                <a href="teanews.html">新闻编辑</a>
+            </li>
+            <li>
+                <a href="StudentChoosCourse.html">学生选课信息</a>
+            </li>
+            <li   class="active">
+                <a href="fileupload.html">上传题库</a>
+            </li>
+            <li>
+                <a href="gen_paper.html">打印试卷</a>
+
+            </li>
+            <li>
+                <a href="#">上传成绩表</a>
+
+            </li>
+        </ul>
+
+        <div id="search">
+
+            <input type="text" class="input" value="" placeholder="Keyword search here...">
+            <input type="submit" class="submit" value="Go">
+
+        </div>
+        <!-- end #search -->
+
+    </div>
+    <!-- end .container -->
+
+</div>      <!--end top-->
+
+<br><br><br><br>
+
+<div align="center">
+    <h6 align="center">选择题文件上传入口&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">点击下载选择题模板</a></h6>
+    <div id="easyContainer1">
+    </div>
+</div>
+
+<br><br>
+
+<h6 align="center">主观题文件上传入口&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">点击下载主观题模板</a></h6>
+<div id="easyContainer2" align="center"></div>
+<br><br>
+
+<h6 align="center">编程题文件上传入口&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">点击下载编程题模板</a></h6>
+<div id="easyContainer3" align="center"></div>
+<br><br>
+
+
+<div style=" height: 200px; margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+    <h4 style="text-align:center;">题目上传下载说明</h4>
+        <div style="float: left ;width: 51%;padding-left: 30%;"><ul>
+            <li>注意：不要修改模板的格式</li>
+            <li>1.试题文件的格式为xls</li>
+            <li>2.文档的第一列为题目，第二列为答案(如果为选择题则答案为答案内容，并非选项)</li>
+            <li>3.第三列为分值(数字)</li>
+            <li>4.第四列为试题的难度（1为简单，2为一般，3为困难，均为数字）</li>
+            <li>5.第五列为课程编号（数字）</li>
+        </ul></div>
+</div>
+
+
+<script type="text/javascript">
+    $('#easyContainer1').easyUpload({
+        allowFileTypes: '*.xls',//允许上传文件类型，格式'
+        allowFileSize: 100000,//允许上传文件大小(KB)
+        selectText: '选择文件',//选择文件按钮文案
+        multi: true,//是否允许多文件上传
+        multiNum: 5,//多文件上传时允许的文件数
+        showNote: true,//是否展示文件上传说明
+        note: '提示：最多上传5个文件，支持格式为xls',//文件上传说明
+        showPreview: true,//是否显示文件预览
+        url: '../upload',//上传文件地址
+        fileName: 'file',//文件filename配置参数
+        formParam: {
+            'questionType': 'selection'
+        },//文件filename以外的配置参数，格式：{key1:value1,key2:value2}
+        timeout: 30000,//请求超时时间
+        successFunc: function (res) {
+            console.log('成功回调', res);
+        },//上传成功回调函数
+        errorFunc: function (res) {
+            console.log('失败回调', res);
+        },//上传失败回调函数
+        deleteFunc: function (res) {
+            console.log('删除回调', res);
+        }//删除文件回调函数
+    });
+    $('#easyContainer2').easyUpload({
+        allowFileTypes: '*.xls',//允许上传文件类型，格式'
+        allowFileSize: 100000,//允许上传文件大小(KB)
+        selectText: '选择文件',//选择文件按钮文案
+        multi: true,//是否允许多文件上传
+        multiNum: 5,//多文件上传时允许的文件数
+        showNote: true,//是否展示文件上传说明
+        note: '提示：最多上传5个文件，支持格式为xls',//文件上传说明
+        showPreview: true,//是否显示文件预览
+        url: '../upload',//上传文件地址
+        fileName: 'file',//文件filename配置参数
+        formParam: {
+            'questionType': 'subjection'
+        },//文件filename以外的配置参数，格式：{key1:value1,key2:value2}
+        timeout: 30000,//请求超时时间
+        successFunc: function (res) {
+            console.log('成功回调', res);
+        },//上传成功回调函数
+        errorFunc: function (res) {
+            console.log('失败回调', res);
+        },//上传失败回调函数
+        deleteFunc: function (res) {
+            console.log('删除回调', res);
+        }//删除文件回调函数
+    });
+    $('#easyContainer3').easyUpload({
+        allowFileTypes: '*.xls',//允许上传文件类型，格式'
+        allowFileSize: 100000,//允许上传文件大小(KB)
+        selectText: '选择文件',//选择文件按钮文案
+        multi: true,//是否允许多文件上传
+        multiNum: 5,//多文件上传时允许的文件数
+        showNote: true,//是否展示文件上传说明
+        note: '提示：最多上传5个文件，支持格式为xls',//文件上传说明
+        showPreview: true,//是否显示文件预览
+        url: '../upload',//上传文件地址
+        fileName: 'file',//文件filename配置参数
+        formParam: {
+            'questionType': 'online'
+        },//文件filename以外的配置参数，格式：{key1:value1,key2:value2}
+        timeout: 30000,//请求超时时间
+        successFunc: function (res) {
+            console.log('成功回调', res);
+        },//上传成功回调函数
+        errorFunc: function (res) {
+            console.log('失败回调', res);
+        },//上传失败回调函数
+        deleteFunc: function (res) {
+            console.log('删除回调', res);
+        }//删除文件回调函数
+    });
+</script>
+
+</body>
+
+</html>

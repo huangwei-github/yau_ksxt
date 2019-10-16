@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.INewsMapper">
+    
+    <resultMap id="BaseResultMap" type="com.lanou.entity.dto.NewsDto">
+        <id column="id" property="id"></id>
+        <result column="title" property="title"></result>
+        <result column="cover" property="cover"></result>
+        <result column="create" property="createtime"></result>
+        <result column="author" property="author"></result>
+        <result column="rank" property="rank"></result>
+        <result column="content" property="content"></result>
+    </resultMap>
+
+    <select id="selectAllNews" resultMap="BaseResultMap">
+        select * from tb_news
+    </select>
+
+</mapper>

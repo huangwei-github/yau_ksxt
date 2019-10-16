@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.IRealmMapper">
+
+    <select id="selectUserRoleByUser" parameterType="com.lanou.entity.pojo.TbUser" resultType="java.lang.Integer">
+        select role from tb_user_role where user = #{id}
+    </select>
+
+    <select id="selectUserPermissionByUser" parameterType="com.lanou.entity.pojo.TbUser" resultType="java.lang.Integer">
+        select permission from tb_user_permission where user = #{id}
+    </select>
+
+    <select id="selectUserByUsername" parameterType="java.lang.String" resultType="com.lanou.entity.pojo.TbUser">
+        select * from tb_user where username = #{username}
+    </select>
+
+</mapper>

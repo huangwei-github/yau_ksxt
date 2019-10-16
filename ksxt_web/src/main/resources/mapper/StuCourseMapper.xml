@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.IStuCourseMapper">
+
+    <resultMap id="StuCourse" type="com.lanou.entity.dto.StudCourseDto">
+        <id column="id" property="id"></id>
+        <result column="course" property="course"></result>
+        <result column="nature" property="nature"></result>
+        <result column="score" property="score"></result>
+        <result column="year" property="year"></result>
+        <result column="attr" property="attr"></result>
+        <result column="name" property="name"></result>
+    </resultMap>
+
+    <select id="selectAllStuCourse" parameterType="com.lanou.entity.dto.StudCourseDto" resultMap="StuCourse">
+        select
+            a.course,
+            b.nature,
+            b.score,
+            b.year,
+            b.attr,
+            e.name
+        from
+            tb_course as a,
+            tb_course_info as b,
+            tb_course_student as c,
+            tb_course_teacher as d,
+            tb_teacher_info as e
+        where
+            c.course = a.id and
+            a.id = b.id and
+            b.id = d.course and
+            d.teacher = e.teacher
+    </select>
+
+</mapper>

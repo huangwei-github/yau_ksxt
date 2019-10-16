@@ -1,0 +1,3 @@
+消息队列服务仍存在问题：
+    若想使消息队列服务生效，请在activemq.xml前加spring-
+    并且去掉MessageController、MsgConsumerService、MsgProviderService的注释

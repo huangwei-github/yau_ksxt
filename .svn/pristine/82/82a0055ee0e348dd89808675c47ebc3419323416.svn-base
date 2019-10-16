@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.IGradeMapper">
+    <resultMap id="result" type="com.lanou.entity.pojo.TbGrade">
+        <id property="id" column="id"></id>
+        <result property="student" column="student"></result>
+        <result property="course" column="course"></result>
+        <result property="grade" column="grade"></result>
+        <result property="grade1" column="grade"></result>
+        <result property="grade2" column="grade"></result>
+        <result property="notes" column="notes"></result>
+
+    </resultMap>
+    <select id="selectStuScore" parameterType="java.lang.Integer" resultMap="result">
+        select * from tb_grade where student=#{student}
+    </select>
+
+
+
+</mapper>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:amq="http://activemq.apache.org/schema/core"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://activemq.apache.org/schema/core
+       http://activemq.apache.org/schema/core/activemq-core.xsd">
+
+    <context:component-scan base-package="com.lanou"></context:component-scan>
+
+    <!--ActiveMQ连接工厂-->
+    <amq:connectionFactory id="amqConnectionFactory"
+                           brokerURL="tcp://localhost:61616"
+                           userName="admin"
+                           password="admin">
+    </amq:connectionFactory>
+
+    <!--JMS连接工厂-->
+    <bean id="jmsConnectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory">
+        <constructor-arg ref="amqConnectionFactory"></constructor-arg>
+        <property name="sessionCacheSize" value="100"></property>
+    </bean>
+
+    <!--定义消息队列-->
+    <bean id="queue" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg value="queue1"></constructor-arg>
+    </bean>
+
+    <!--配置JMS模板，用于发送、接收消息-->
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="jmsConnectionFactory"></property>
+        <property name="defaultDestination" ref="queue"></property>
+        <property name="receiveTimeout" value="10000"></property>
+        <!--true->topics  false->queue[default]-->
+        <property name="pubSubDomain" value="false"></property>
+    </bean>
+
+    <!--用于消息监听-->
+    <bean id="messageListener" class="com.lanou.web.controller.msgqueue.MsgQueueListener"></bean>
+
+    <bean id="messageListenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="jmsConnectionFactory"></property>
+        <property name="destination" ref="queue"></property>
+        <property name="messageListener" ref="messageListener"></property>
+    </bean>
+
+
+</beans>

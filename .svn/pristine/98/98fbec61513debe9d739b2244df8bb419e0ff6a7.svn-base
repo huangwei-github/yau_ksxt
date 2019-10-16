@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>学生个人信息</title>
+
+		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/fancybox.css" type="text/css" media="screen" />
+		<!--上面是top的css下面是信息的css-->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/student.css">
+	</head>
+
+	<body>
+		<div id="header-top">
+
+			<div class="container">
+
+				<a href="#"></a>
+
+				<p class="right">www.哈哈哈哈.com |
+					<a id="stu_name1"></a> |       <!--显示姓名--><!--还有个left未启用-->
+					<a href="#" onclick="logout()">退出登录</a>
+				</p>
+				<!--<p class="right">Subscribe to
+					<a href="#">RSS</a> |
+					<a href="#">Email</a> | <strong>122 Subscribers</strong></p>-->
+			</div>
+			<!-- end .container -->
+
+		</div>
+		<!-- end #header-top -->
+
+		<div id="header" class="header">
+
+			<div class="container">
+
+				<img src="img/yd/微信图片_20190808144534.png" style="width: 100px;" alt="Travel Guide">
+
+			</div>
+			<!-- end .container -->
+
+		</div>
+		<!-- end #header -->
+
+		<div id="nav">
+
+			<div class="container">
+
+				<ul>
+					<li>
+						<a href="index.html">主页</a>
+					</li>
+					<li  class="active">
+						<a href="StudentInfo.html">个人信息</a>
+						<!--<ul>
+                    <li><a href="#">这儿是页面1的按钮</a></li>
+                    <li><a href="#">Private Portfolios</a></li>
+                </ul>-->
+					</li>
+					<li>
+						<a href="StudentScore.html">学生成绩信息</a>
+					</li>
+					<li>
+						<a href="StudentCourse.html">学生课程信息</a>
+					</li>
+					<li>
+						<a href="StudentChoosCourse.html">学生选课</a>
+					</li>
+					<li>
+						<a href="#">测验</a>
+						<ul>
+							<li>
+								<a href="selecting.html" target="_blank">在线练习</a>
+							</li>
+							<li>
+								<a href="examing.html" target="_blank">在线考试</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<div id="search">
+
+					<input type="text" class="input" value="" placeholder="Keyword search here...">
+					<input type="submit" class="submit" value="Go">
+
+				</div>
+				<!-- end #search -->
+
+			</div>
+			<!-- end .container -->
+
+		</div>      <!--end top-->
+
+		<div class="acontainer">
+			<div class="content">
+				<div class="aheader clearfix">
+					<div class="top fl">当前位置>个人信息</div>
+					<div class="bottom fr">
+						<a id="emit" href="javascript:;">编辑</a>
+						<a id="keep" href="javascript:;">保存</a>
+					</div>
+				</div>
+				<div class="main">
+					<!--基础信息-->
+					<div class="BasicInformation">
+						<div class="title">
+							基础信息
+						</div>
+					</div>
+					<div class="content clearfix">
+						<div class="left fl">
+							<div>
+								<label for="">姓名：</label>
+								<input id="stu_name" type="text" />   <!--value="" disabled是补课改变框内文本-->
+							</div>
+							<div>
+								<label for="">性别：</label> 男：
+								<input type="radio" name="sex" value="0" style="width: 20px; margin-top: 12px;"> 女：
+								<input type="radio" name="sex" value="1" style="width: 20px;">
+							</div>
+							<div>
+								<label for="">出生日期：</label>
+								<input id="birthday" type="text">
+							</div>
+							<div>
+								<label for="">身份证号：</label>
+								<input id="idNumber" class="id oInp" type="text" >
+							</div>
+						</div>
+						<div class="right fr">
+							<div>
+								<label for="">学号：</label>
+								<input id="xstu_id" type="number" >
+							</div>
+							<div>
+								<label for="">民族：</label>
+								<input id="national_name" type="text" >
+							</div>
+							<!-- <div class="label">
+                            <label for="">政治面貌：</label>
+                            <div class="option clearfix" id="politics">
+                                <a id="pl_name" href="javascript:;" class="fl"></a>
+                                <i class="fr"></i>
+                                <ul>
+                                    <li>中共党员</li>
+                                    <li>中共预备党员</li>
+                                    <li>共青团员</li>
+                                    <li>群众</li>
+                                    <li>无党派人士</li>
+                                </ul>
+                            </div>
+                        </div>-->
+							<!--<div class="label">
+                            <label for="">独生子女：</label>
+                            <div class="option clearfix" id="child">
+                                <a href="javascript:;" class="fl">是</a>
+                                <i class="fr"></i>
+                                <ul>
+                                    <li>是</li>
+                                    <li>否</li>
+                                </ul>
+                            </div>
+                        </div>-->
+						</div>
+					</div>
+					<!--联系方式-->
+					<div class="BasicInformation">
+						<div class="title">联系方式</div>
+					</div>
+					<div class="content clearfix">
+						<div class="left fl">
+							<div>
+								<label for="">手机号码：</label>
+								<input id="phone">
+							</div>
+							<!--<div>
+                            <label for="">QQ号码：</label>
+                            <input id="qq" type="number" value="" disabled>
+                        </div>-->
+						</div>
+						<div class="right fr">
+							<div>
+								<label for="">电子邮箱：</label>
+								<input id="e_mail" type="text" value="" >   <!--class="mailbox" disabled-->
+							</div>
+						</div>
+					</div>
+					<!--辅导员信息-->
+					<div class="BasicInformation">
+						<div class="title">
+							备注
+						</div>
+					</div>
+					<div class="content clearfix">
+						<div class="left fl">
+							<div>
+								<!--<label for="">姓名：</label>-->
+								<textarea id="notes" rows="10" cols="100" style="margin: 0px; width: 668px; height: 244px;resize: none;">这里是备注</textarea>
+							</div>
+
+						</div>
+						<!--<div class="right fr">
+                        <div>
+                            <label for="">电话号码：</label>
+                            <input type="number" value="">
+                        </div>
+                    </div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript">
+			$.ajax({
+				url:"../findInfo?identifier=student",
+				type:"POST",
+				dataType:"json",
+				success: function(data){
+					console.log(data.code + data.message+data.data.name+data.data.gender+data.data.birth+(typeof (data.data.birth))+data.data.identify+data.data.student+data.data.nation+data.data.email+data.data.phone+data.data.notes);
+					if(data.code != 200){
+						window.location.href = "login.html";
+					}else{
+						//将收到的个人数据填充在页面上
+						/*$("#stu_name1").text(data.data.name);*/
+						$("#stu_name").val(data.data.name);
+						$("input[name=sex][value="+data.data.gender+"]").attr("checked","checked");
+						$("#birthday").val(data.data.birth);
+						$("#idNumber").val(data.data.identify);
+						$("#xstu_id").val(data.data.student);
+						$("#national_name").val(data.data.nation);
+						$("#phone").val(data.data.phone);
+						$("#e_mail").val(data.data.email);
+						$("#notes").val(data.data.notes);
+					}
+                }
+			})
+		</script>
+        <script type="text/javascript" src="js/loaclcustom.js"></script>    <!--自定义的JavaScript-->
+	</body>
+
+</html>

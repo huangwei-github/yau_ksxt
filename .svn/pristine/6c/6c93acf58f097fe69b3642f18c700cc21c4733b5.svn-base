@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>新闻编辑页面</title>
+    <link rel="stylesheet" href="css/wangEditor.css">
+    <script type="text/javascript" src="./js/wangEditor.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap-3.3.4.css">
+    <style>
+    </style>
+</head>
+
+<body>
+<form class="form-inline" style="margin-left: 2%">
+    <h3>新闻编辑页</h3><a href="teaindex.html">返回上一页</a>
+    <hr>
+    <div class="form-group">
+        <input type="text" id="title" class="form-control" placeholder="请在这里输入新闻标题...">
+    </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="form-group">
+        <span id="tips">新闻封面</span>
+        <input type="file" id="file" name="file" class="form-control" formenctype="multipart/form-data"
+               onfocusout="postCover()">
+    </div>
+    <button class="btn btn-primary" onclick="postNews()">完成(Complete)</button>
+</form>
+<hr>
+<div id="editor" style="width: 90%;margin-left: 2%">
+</div>
+
+<script type="text/javascript">
+    var E = window.wangEditor
+    var editor = new E('#editor')
+    // 配置服务器端地址
+    editor.customConfig.uploadImgServer = '../eupload'
+    editor.create()
+</script>
+
+<script>
+
+    var cover = "";
+
+    function postCover() {
+        var formData = new FormData(('#file')[0]);
+        $.ajax({
+            url: '../uploadimg',
+            type: 'POST',
+            data: formData,
+            cache: false,
+            processData: false, // 使数据不做处理
+            contentType: false, // 不要设置Content-Type请求头
+            success: function (res) {
+                cover = res.data;
+                console.log(cover);
+            },
+            error: function () {
+                $('#tips').val('文件上传失败');
+            }
+        })
+    }
+    
+    
+    function postNews() {
+        $.ajax({
+            url: '../news',
+            type: 'POST',
+            data: {
+                'title': $('#title').val(),
+                'cover': cover,
+                'content': editor.txt.html(),
+                'author': ''
+            },
+            success: function () {
+                console.log("新闻发送成功");
+            }
+        })
+    }
+
+</script>
+
+</body>
+
+</html>
