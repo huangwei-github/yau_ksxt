@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.INewsDao">
+
+    <cache type="org.mybatis.caches.redis.RedisCache"></cache>
+    
+    <resultMap id="BaseResult" type="com.lanou.entity.pojo.others.News">
+        <id column="id" property="id"></id>
+        <result column="title" property="title" jdbcType="VARCHAR"></result>
+        <result column="cover" property="cover" jdbcType="VARCHAR"></result>
+        <result column="content" property="content" jdbcType="VARCHAR"></result>
+        <result column="create" property="create"></result>
+        <result column="author" property="author" jdbcType="INTEGER"></result>
+        <result column="rank" property="rank" jdbcType="INTEGER"></result>
+        <result column="status" property="status" jdbcType="INTEGER"></result>
+        <result column="notes" property="notes" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="selectAll" resultMap="BaseResult" useCache="true">
+        select * from tb_news
+    </select>
+
+    <delete id="deleteNews" parameterType="java.util.List">
+        delete from tb_news where id in
+        <foreach collection="idCollection" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+    
+    <update id="updateNews" parameterType="java.util.Map">
+        update tb_news
+        <set>
+            <if test="title != null "> title = #{title}, </if>
+            <if test="cover != null"> cover = #{cover}, </if>
+            <if test="content != null "> content = #{content}, </if>
+            <if test="status != null"> status = #{status} </if>
+        </set>
+     </update>
+
+    <insert id="insertNews" parameterType="com.lanou.entity.pojo.others.News">
+        insert into tb_news(title, cover, content, create, author, rank) values
+        (#{title}, #{cover}, #{content}, #{create}, #{author}, #{rank})
+    </insert>
+
+</mapper>

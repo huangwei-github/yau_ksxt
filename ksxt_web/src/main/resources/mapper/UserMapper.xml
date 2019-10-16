@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.dao.IUserDao">
+
+    <select id="select4Login" parameterType="com.lanou.entity.pojo.shiro.User" resultType="com.lanou.entity.pojo.shiro.User">
+        select * from tb_user where username = #{username} and password = #{password}
+    </select>
+
+    <select id="selectByUsername" parameterType="java.lang.String" resultType="com.lanou.entity.pojo.shiro.User">
+        select * from tb_user where username = #{username}
+    </select>
+
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ksxt_web" />
+        <module name="ksxt_service" />
+        <module name="ksxt_util" />
+        <module name="ksxt_dao" />
+        <module name="ksxt_entity" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ksxt_dao" target="1.5" />
+      <module name="ksxt_entity" target="1.5" />
+      <module name="ksxt_parent" target="1.5" />
+      <module name="ksxt_service" target="1.5" />
+      <module name="ksxt_util" target="1.5" />
+      <module name="ksxt_web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

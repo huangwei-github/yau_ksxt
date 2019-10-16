@@ -1,0 +1,10 @@
+
+           dao       service    controller
+
+增加       insert     add        POST
+
+删除       delete     remove     DELETE
+
+修改       update     modify     PUT
+
+查询       select     find       GET

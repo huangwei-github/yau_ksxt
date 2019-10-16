@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ksxt_web" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ksxt_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/ksxt_web/pom.xml" />
+        <option value="$PROJECT_DIR$/ksxt_service/pom.xml" />
+        <option value="$PROJECT_DIR$/ksxt_dao/pom.xml" />
+        <option value="$PROJECT_DIR$/ksxt_entity/pom.xml" />
+        <option value="$PROJECT_DIR$/ksxt_util/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://www.svnchina.com/svn2/onlineprogramming/ksxt-ver1.0" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

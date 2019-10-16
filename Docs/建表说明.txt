@@ -1,0 +1,37 @@
+建立以下五张表：
+    基于 RBAC 概念， 就会存在3 张基础表： 用户，角色，权限， 以及 2 张中间表来建立 用户与角色的多对多关系，角色与权限的多对多关系。
+    用户与权限之间也是多对多关系，但是是通过 角色 间接建立的
+
+create table user (
+  id bigint auto_increment,
+  name varchar(100),
+  password varchar(100),
+  constraint pk_users primary key(id)
+) charset=utf8 ENGINE=InnoDB;
+
+create table role (
+  id bigint auto_increment,
+  name varchar(100),
+  constraint pk_roles primary key(id)
+) charset=utf8 ENGINE=InnoDB;
+
+create table permission (
+  id bigint auto_increment,
+  name varchar(100),
+  constraint pk_permissions primary key(id)
+) charset=utf8 ENGINE=InnoDB;
+
+create table user_role (
+  uid bigint,
+  rid bigint,
+  constraint pk_users_roles primary key(uid, rid)
+) charset=utf8 ENGINE=InnoDB;
+
+create table role_permission (
+  rid bigint,
+  pid bigint,
+  constraint pk_roles_permissions primary key(rid, pid)
+) charset=utf8 ENGINE=InnoDB;
+
+
+
