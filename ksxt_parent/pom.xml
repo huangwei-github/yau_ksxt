@@ -33,7 +33,7 @@
         <pagehelper.version>5.1.10</pagehelper.version>
         <log4j.version>1.2.17</log4j.version>
         <shiro.version>1.2.1</shiro.version>
-        <quartz.version>2.3.1</quartz.version>
+        <quartz.version>2.3.2</quartz.version>
         <java.mail.version>1.4.7</java.mail.version>
         <fastdfs.version>1.27-SNAPSHOT</fastdfs.version>
         <hutool.version>4.0.12</hutool.version>
