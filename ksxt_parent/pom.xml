@@ -15,7 +15,7 @@
         <aspectj.version>1.9.2</aspectj.version>
         <druid.version>1.1.16</druid.version>
         <fastjson.version>1.2.47</fastjson.version>
-        <mysql.version>8.0.16</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <commons.io.version>2.6</commons.io.version>
         <commons.logging.version>1.2</commons.logging.version>
         <commons.fileupload.version>1.4</commons.fileupload.version>
